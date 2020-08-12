@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.31.106:3306/test-wx?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+    url: jdbc:mysql://192.168.31.106:3306/test-wx?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: txme123
     maxActive: 50
