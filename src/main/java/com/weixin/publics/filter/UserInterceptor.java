@@ -1,3 +1,4 @@
+/*
 package com.weixin.publics.filter;
 
 import org.springframework.lang.Nullable;
@@ -8,10 +9,12 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+*/
 /**
  * @Author: xiaodong
  * @Date: 2020/11/3 14:25
- */
+ *//*
+
 public class UserInterceptor implements HandlerInterceptor{
 
     @Override
@@ -31,3 +34,4 @@ public class UserInterceptor implements HandlerInterceptor{
     }
 
 }
+*/

@@ -8,7 +8,6 @@ import lombok.Data;
  * @Date: 2020/10/20 15:08
  */
 @Data
-
 public class User {
     private String name;
     private String age;

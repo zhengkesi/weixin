@@ -2,6 +2,7 @@ package com.weixin.publics.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.weixin.publics.dto.User;
+import com.weixin.publics.service.SearcherNewService;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +23,9 @@ public class TestController {
     @Autowired
     private RabbitTemplate rabbitTemplate;
     @Autowired
-    User user;
+    private User user;
+    @Autowired
+    private SearcherNewService searcherNewService;
 
     @GetMapping("/token")
     public JSONObject setToken(HttpServletResponse response){
@@ -62,4 +65,17 @@ public class TestController {
         map.put("jsonObject",jsonObject);
         return map;
     }
+
+    @GetMapping("/getSearch")
+    public Object getSearch(){
+        try {
+            Object search = searcherNewService.search("测试校");
+            //String string = JSONObject.toJSONString(search);
+            return search;
+        }catch (Exception e){
+            return e.getMessage();
+        }
+    }
+
+
 }
