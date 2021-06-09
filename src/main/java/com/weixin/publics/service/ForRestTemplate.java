@@ -2,6 +2,7 @@ package com.weixin.publics.service;
 
 import com.alibaba.fastjson.JSONObject;
 import com.weixin.publics.dto.User;
+import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -21,7 +22,7 @@ public class ForRestTemplate {
     @Autowired
     private RestTemplate restTemplate;
 
-    public void setRestTemplate() throws Exception{
+    public void setRestTemplate(Class<T> clazz) throws Exception{
         //URL url = new URL("");
         HttpHeaders headers = new HttpHeaders();
         headers.add("","");
